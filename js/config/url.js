@@ -1,0 +1,1 @@
+export let urlAPI = "https://aryka.herokuapp.com/uang";
