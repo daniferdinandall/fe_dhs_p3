@@ -1,4 +1,5 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
+import { urlAPIdhs } from "../config/url.js";
 // import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabel } from "../temp/table.js";
 export function isiTablePresensi(results) {
@@ -12,6 +13,10 @@ function isiRow(value) {
             .replace("#NPM#", value.mahasiswa.npm)
             .replace("#PROGRAM_STUDI#", value.mahasiswa.program_studi?value.mahasiswa.program_studi.nama:"#PROGRAM_STUDI#")
             .replace("#FAKULTAS#", value.mahasiswa.fakultas?value.mahasiswa.fakultas.nama:"#FAKULTAS#")
+            .replace("#IDLIHAT#", value._id)
+            .replace("#IDEDIT#", value._id)
+            .replace("#IDELETE#", value._id)
+            .replace("#URL#", urlAPIdhs)
             // .replace("#WARNA#", getRandomColor())
             // .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);

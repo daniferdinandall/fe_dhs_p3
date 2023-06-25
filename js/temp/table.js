@@ -16,8 +16,9 @@ export let isiTabel =
     <td class="whitespace-nowrap px-6 py-4">
         <div class="w-auto">
         <p>
-            <a href="" class="text-s font-semibold text-coolGray-800">Edit</a>" | "
-            <a href="" class="text-s font-semibold text-coolGray-800">Delete</a>
+            <a type="button" href="detailDhs.html?dhsId=#IDLIHAT#" class="text-s font-semibold text-coolGray-800">Lihat</a> | 
+            <a type="button" href="editDhs.html?dhsId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+            <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
         </p>
         </div>
     </td>
