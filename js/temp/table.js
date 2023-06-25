@@ -13,6 +13,14 @@ export let isiTabel =
             <p class="text-xs font-medium text-coolGray-500">#FAKULTAS#</p>
         </div>
     </td>
+    <td class="whitespace-nowrap px-6 py-4">
+        <div class="w-auto">
+        <p>
+            <a href="" class="text-s font-semibold text-coolGray-800">Edit</a>" | "
+            <a href="" class="text-s font-semibold text-coolGray-800">Delete</a>
+        </p>
+        </div>
+    </td>
 </tr>
 `
 export let isiTabelDosen =
