@@ -15,26 +15,11 @@ export let isiTabel =
     </td>
     <td class="whitespace-nowrap px-6 py-4">
         <div class="w-auto">
-            <p class="text-s font-semibold text-coolGray-800">#MATKUL#</p>
-            <p class="text-s font-medium text-coolGray-800">Grade: #NILAI#</p>
-            </div>
-        </td>
-    <td class="whitespace-nowrap px-6 py-4">
-        <div class="w-auto">
-            <p class="text-s font-semibold text-coolGray-800">#MATKUL1#</p>
-            <p class="text-s font-medium text-coolGray-800">Grade: #NILAI1#</p>
-        </div>
-    </td>
-    <td class="whitespace-nowrap px-6 py-4">
-        <div class="w-auto">
-            <p class="text-s font-semibold text-coolGray-800">#MATKUL2#</p>
-            <p class="text-s font-medium text-coolGray-800">Grade: #NILAI2#</p>
-        </div>
-    </td>
-    <td class="whitespace-nowrap px-6 py-4">
-        <div class="w-auto">
-            <p class="text-s font-semibold text-coolGray-800">#MATKUL3#</p>
-            <p class="text-s font-medium text-coolGray-800">Grade: #NILAI3#</p>
+        <p>
+            <a type="button" href="detailDhs.html?dhsId=#IDLIHAT#" class="text-s font-semibold text-coolGray-800">Lihat</a> | 
+            <a type="button" href="editDhs.html?dhsId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+            <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
+        </p>
         </div>
     </td>
 </tr>

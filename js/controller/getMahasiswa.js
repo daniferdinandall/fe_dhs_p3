@@ -4,6 +4,10 @@ import { isiTabelMahasiswa } from "../temp/table.js";
 export function isiTablePresensi(results) {
     results.forEach(isiRow);
 }
+export function isiOptionMahasiswa(results) {
+    results.forEach(isiOption);
+}
+
 function isiRow(value) {
     console.log(value)
     console.log(value.mata_kuliah?value.mata_kuliah[1].nama:"1")
@@ -14,4 +18,10 @@ function isiRow(value) {
             .replace("#FAKULTAS#", value.fakultas?value.fakultas.nama:"#FAKULTAS#")
             .replace("#DOSEN_WALI#", value.dosen_wali?value.dosen_wali.nama:"#DOSEN_WALI#");
     addInner("iniTabel", content);
+}
+
+function isiOption(value) {
+    let content =
+        `<option value="${value._id}">${value.nama}</option>`;
+    addInner("optionMahasiswa", content);
 }
