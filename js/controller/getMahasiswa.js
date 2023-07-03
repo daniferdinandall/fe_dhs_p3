@@ -22,6 +22,6 @@ function isiRow(value) {
 
 function isiOption(value) {
     let content =
-        `<option value="${value._id}">${value.nama}</option>`;
+        `<option value='${JSON.stringify(value)}'>${value.nama}</option>`;
     addInner("optionMahasiswa", content);
 }
