@@ -51,3 +51,12 @@ export let isiTabelMahasiswa = `
     <td class="whitespace-nowrap px-6 py-4">#DOSEN_WALI#</td>
 </tr>
 `
+export let isiTabelNilai =
+    `
+<tr class="border-b dark:border-neutral-500">
+    <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
+    <td class="whitespace-nowrap px-6 py-4">#SKS#</td>
+    <td class="whitespace-nowrap px-6 py-4">#DOSEN#</td>
+    <td class="whitespace-nowrap px-6 py-4">#NILAI#</td>
+</tr>
+`
