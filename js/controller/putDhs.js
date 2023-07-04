@@ -1,10 +1,10 @@
-import { postData } from "https://bukulapak.github.io/api/process.js";
-import { onClick, getValue } from "https://bukulapak.github.io/element/process.js";
-import { urlAPIdhs, AmbilResponse } from "../config/url.js";
+import { putData } from "https://bukulapak.github.io/api/process.js";
+import { onClick } from "https://bukulapak.github.io/element/process.js";
+import { urlPUT, AmbilResponse } from "../config/url_putPresensi.js";
 
 
-function pushData() {
-    console.log("pushData");
+function editData() {
+    console.log(urlPUT);
     // window.location.href = "index.html";
     // var hari_kerja = getValue("hari_kerja");
     let data = {
@@ -41,7 +41,7 @@ function pushData() {
         });
         console.log(sks, dosen);
     }
-    console.log(data.mata_kuliah[0]);
+    // console.log(data.mata_kuliah[0]);
 
     // add nilai mahasiswa
     let elementMhs = document.getElementById("optionMahasiswa"); 
@@ -49,8 +49,8 @@ function pushData() {
     console.log(selectedOption.getAttribute("alldata"))
     data.mahasiswa = JSON.parse(selectedOption.getAttribute("alldata"))
     // console.log(getValue("optionMahasiswa"))
-
-    postData(urlAPIdhs, data, AmbilResponse);
+    console.log(data)
+    putData(urlPUT, data, AmbilResponse);
 
     // window.location.href = "index.html";
 }
@@ -60,5 +60,5 @@ function cancel() {
     window.location.href = "index.html";
 }
 
-onClick("button", pushData);
+onClick("button", editData);
 onClick("buttonCancel", cancel);

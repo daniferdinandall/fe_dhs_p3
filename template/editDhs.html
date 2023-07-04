@@ -31,8 +31,10 @@
     <meta name="twitter:image"
         content="http://tailwindcomponents.com/storage/8345/conversions/temp89170-ogimage.jpg?v=2023-06-19 14:15:28" />
 
+    <!-- <script type="module" src="../js/fetch.js"></script> -->
 
-    <script type="module" src="../js/fetchDetailDhs.js"></script>
+    <script type="module" src="../js/fetchOptionMatkulEdit.js"></script>
+    <script type="module" src="../js/fetchOptionMahasiswa.js"></script>
 
     <title>Dark Dashboard Example by pantazisoftware. </title>
 
@@ -60,7 +62,7 @@
                 <div class="pb-6 border-b border-coolGray-100">
                     <div class="flex flex-wrap items-center justify-between -m-2">
                         <div class="w-full md:w-auto p-2">
-                            <h2 class="text-coolGray-900 text-lg font-semibold">DHS</h2>
+                            <h2 class="text-coolGray-900 text-lg font-semibold">Insert DHS</h2>
                             <p class="text-xs text-coolGray-500 font-medium">Data Hasik Studi Mahasiswa</p>
                         </div>
                         <div class="w-full md:w-auto p-2">
@@ -69,7 +71,14 @@
                                     <button
                                         class="flex flex-wrap justify-center w-full px-4 py-2 bg-red-500 hover:bg-red-600 font-medium text-sm text-white border border-red-500 rounded-md shadow-button"
                                         id="buttonCancel">
-                                        <p>Kembali</p>
+                                        <p>Cancel</p>
+                                    </button>
+                                </div>
+                                <div class="w-full md:w-auto p-1.5">
+                                    <button
+                                        class="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button"
+                                        id="button">
+                                        <p>Save</p>
                                     </button>
                                 </div>
                             </div>
@@ -84,25 +93,13 @@
                                 <p class="text-sm text-coolGray-800 font-semibold">Pilih Mahasiswa</p>
                             </div>
                             <div class="w-full md:w-3/5 p-3">
-                                <p id="namaMhs" class="text-sm text-coolGray-800 font-bold"></p>
-                            </div>
-                            <div class="w-full md:w-1/3 p-3">
-                                <p class="text-sm text-coolGray-800 font-semibold">NPM</p>
-                            </div>
-                            <div class="w-full md:w-3/5 p-3">
-                                <p id="npmMhs" class="text-sm text-coolGray-800 font-bold   "></p>
-                            </div>
-                            <div class="w-full md:w-1/3 p-3">
-                                <p class="text-sm text-coolGray-800 font-semibold">Fakultas</p>
-                            </div>
-                            <div class="w-full md:w-3/5 p-3">
-                                <p id="fakultasMhs" class="text-sm text-coolGray-800 font-bold"></p>
-                            </div>
-                            <div class="w-full md:w-1/3 p-3">
-                                <p class="text-sm text-coolGray-800 font-semibold">Program Studi</p>
-                            </div>
-                            <div class="w-full md:w-3/5 p-3">
-                                <p id="prodiMhs" class="text-sm text-coolGray-800 font-bold"></p>
+                                <select id="optionMahasiswa"
+                                    class="w-full px-4 py-2.5 text-base text-black font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input">
+                                    <!-- <option disabled selected value="">Select an option</option> -->
+                                    <!-- <option value="value1">Option 1</option>
+                                    <option value="value2">Option 2</option>
+                                    <option value="value3">Option 3</option> -->
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -112,38 +109,42 @@
                     <div class="w-full md:w-9/12">
                         <div class="flex flex-wrap -m-3">
                             <div class="w-full md:w-1/3 p-3">
-                                <p class="text-lg text-coolGray-1000 font-semibold">Nilai</p>
+                                <p class="text-lg text-coolGray-1000 font-semibold">Pilih Nilai</p>
                             </div>
                         </div>
                     </div>
                     <!-- Loop Here -->
-                    <div>
-                        <table id="tabelNilai" class="min-w-full text-left text-sm font-medium">
-                            <thead class="border-b font-medium dark:border-neutral-500">
-                                <tr>
-                                    <th scope="col" class="px-6 py-4 w-2/6">Matakuliah</th>
-                                    <th scope="col" class="px-6 py-4 w-1/6">Sks</th>
-                                    <th scope="col" class="px-6 py-4 w-2/6">Dosen</th>
-                                    <th scope="col" class="px-6 py-4 w-1/6">Nilai</th>
-                                </tr>
+                    <div id="optionMatkul">
 
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
                     </div>
-
+                    <!-- <div class="w-full md:w-9/12">
+                        <div class="flex-wrap">
+                            <div class="flex flex-wrap -m-3">
+                                <div class="w-full md:w-2/3 p-3">
+                                    <p class="text-sm text-coolGray-800 font-semibold">MTK</p>
+                                </div>
+                                <div class="w-full md:w-1/3 p-3">
+                                    <select id="optionMatkul"
+                                        class="w-full px-4 py-2.5 text-base text-black font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input">
+                                        <option disabled selected value="">Select an option</option>
+                                        <option value="value1">Option 1</option>
+                                        <option value="value2">Option 2</option>
+                                        <option value="value3">Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- END Of Loop -->
                 </div>
             </div>
         </div>
     </div>
     </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <!-- <script src="../js/controller/deleteDhs.js"></script> -->
-    <script type="module" src="../js/controller/lihatDhs.js"></script>
 
-    <!-- <script type="module" src="../js/controller/postDhs.js"></script> -->
+    <script type="module" src="../js/fetchEditDhs.js"></script>
+    <script type="module" src="../js/controller/putDhs.js"></script>
 </body>
 
 </html>
