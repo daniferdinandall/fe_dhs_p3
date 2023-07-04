@@ -1,4 +1,5 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
+import { urlAPImahasiswa } from "../config/url.js";
 // import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabelMahasiswa } from "../temp/table.js";
 export function isiTablePresensi(results) {
@@ -16,7 +17,10 @@ function isiRow(value) {
             .replace("#NPM#", value.npm)
             .replace("#PROGRAM_STUDI#", value.program_studi?value.program_studi.nama:"#PROGRAM_STUDI#")
             .replace("#FAKULTAS#", value.fakultas?value.fakultas.nama:"#FAKULTAS#")
-            .replace("#DOSEN_WALI#", value.dosen_wali?value.dosen_wali.nama:"#DOSEN_WALI#");
+            .replace("#DOSEN_WALI#", value.dosen_wali?value.dosen_wali.nama:"#DOSEN_WALI#")
+            .replace("#IDEDIT#", value._id)
+            .replace("#IDELETE#", value._id)
+            .replace("#URL#", urlAPImahasiswa);
     addInner("iniTabel", content);
 }
 
