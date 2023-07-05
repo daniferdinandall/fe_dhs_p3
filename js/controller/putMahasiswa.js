@@ -41,7 +41,7 @@ function editData() {
 
 function cancel() {
     console.log("cancel");
-    window.location.href = "index.html";
+    window.location.href = "mahasiswa.html";
 }
 
 onClick("button", editData);

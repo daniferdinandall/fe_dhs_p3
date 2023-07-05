@@ -30,6 +30,14 @@ export let isiTabelDosen =
     <td class="whitespace-nowrap px-6 py-4">#KODE#</td>
     <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
     <td class="whitespace-nowrap px-6 py-4">#PHONE#</td>
+    <td class="whitespace-nowrap px-6 py-4">
+        <div class="w-auto">
+            <p>
+                <a type="button" href="editdosen.html?dosenId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
+            </p>
+        </div>
+    </td>
 </tr>
 `
 export let isiTabelMatkul =
@@ -89,11 +97,27 @@ export let isiTabelProdi = `
 <tr class="border-b dark:border-neutral-500">
     <td class="whitespace-nowrap px-6 py-4">#KODE#</td>
     <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
+    <td class="whitespace-nowrap px-6 py-4">
+        <div class="w-auto">
+            <p>
+                <a type="button" href="editProdi.html?prodiId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
+            </p>
+        </div>
+    </td>
 </tr>
 `
 export let isiTabelFakultas = `
 <tr class="border-b dark:border-neutral-500">
     <td class="whitespace-nowrap px-6 py-4">#KODE#</td>
     <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
+    <td class="whitespace-nowrap px-6 py-4">
+        <div class="w-auto">
+            <p>
+                <a type="button" href="editFakultas.html?fakultasId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
+            </p>
+        </div>
+    </td>
 </tr>
 `

@@ -1,4 +1,5 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
+import { urlAPIProgramStudi } from "../config/url.js";
 // import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabelProdi } from "../temp/table.js";
 export function isiTable(results) {
@@ -14,6 +15,9 @@ function isiRow(value) {
     let content =
     isiTabelProdi.replace("#KODE#", value.kode_program_studi)
             .replace("#NAMA#", value.nama)
+            .replace("#IDEDIT#", value._id)
+            .replace("#IDELETE#", value._id)
+            .replace("#URL#", urlAPIProgramStudi);
     addInner("iniTabel", content);
 }
 

@@ -28,7 +28,7 @@ function editData() {
 
 function cancel() {
     console.log("cancel");
-    window.location.href = "index.html";
+    window.location.href = "matkul.html";
 }
 
 onClick("button", editData);
