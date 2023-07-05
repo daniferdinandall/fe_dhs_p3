@@ -150,6 +150,7 @@
                 </a>
             </div>
         </div>
+<<<<<<< HEAD
         
         <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6">
             <button>
@@ -160,13 +161,29 @@
             </button>
 
           <table id="iniTabel" class="min-w-full text-left text-sm font-medium">
+=======
+        <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6 overflow-x-auto">
+            <div class="w-full md:w-auto p-2">
+                <div class="flex flex-wrap justify-between -m-1.5">
+                  <div class="w-full md:w-auto p-1.5">  
+                    <button id = "button"
+                      class="flex flex-wrap justify-center w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 font-medium text-sm text-white border border-blue-500 rounded-md shadow-button">
+                      <a href="insertMahasiswa.html"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Tambah Data
+                    </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          <table id="iniTabel" class="min-w-full text-left text-sm font-medium ">
+>>>>>>> 524af1e13a31b2181cc4f6c18906f49d6425ce7a
             <thead class="border-b font-medium dark:border-neutral-500">
                 <tr>
-                    <th scope="col" class="px-6 py-4">NPM</th>
-                    <th scope="col" class="px-6 py-4">Nama</th>
-                    <th scope="col" class="px-6 py-4">Fakultas</th>
-                    <th scope="col" class="px-6 py-4">Program Studi</th>
+                    <th scope="col" class="px-6 py-4">Nama & NPM</th>
+                    <th scope="col" class="px-6 py-4">Program Studi & Fakultas</th>
                     <th scope="col" class="px-6 py-4">Dosen Wali</th>
+                    <th scope="col" class="px-6 py-4">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -178,5 +195,6 @@
         </div>
     </div>
 </div>
+<script src="../js/controller/deleteMahasiswa.js"></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>

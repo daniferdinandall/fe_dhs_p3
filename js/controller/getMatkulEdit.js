@@ -36,7 +36,6 @@ function isiOption(value) {
                                 <div class="w-full md:w-1/3 p-3">
                                     <select id="${value.kode_matkul}" sks="${value.sks}" dosen="${value.dosen.nama}" class="optionMatakuliah w-full px-4 py-2.5 text-base text-black font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input">
                                         class="w-full px-4 py-2.5 text-base text-black font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input">
-                                        <option disabled selected value="">Select an option</option>
                                         <option value="A">A</option>
                                         <option value="AB">AB</option>
                                         <option value="B">B</option>
