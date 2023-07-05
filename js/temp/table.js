@@ -39,6 +39,14 @@ export let isiTabelMatkul =
     <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
     <td class="whitespace-nowrap px-6 py-4">#DOSEN#</td>
     <td class="whitespace-nowrap px-6 py-4">#SKS#</td>
+    <td class="whitespace-nowrap px-6 py-4">
+        <div class="w-auto">
+            <p>
+                <a type="button" href="editmatkul.html?matkulId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
+            </p>
+        </div>
+    </td>
   </tr>
   `
 

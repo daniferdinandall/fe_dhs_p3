@@ -1,4 +1,5 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
+import { urlAPImatkul } from "../config/url.js";
 // import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabelMatkul } from "../temp/table.js";
 export function isiTableMatkul(results) {
@@ -16,6 +17,9 @@ function isiRow(value) {
             .replace("#NAMA#", value.nama)
             .replace("#DOSEN#", value.dosen ? value.dosen.nama : "#DOSEN#")
             .replace("#SKS#", value.sks ? value.sks : "#SKS#")
+            .replace("#IDEDIT#", value._id)
+            .replace("#IDELETE#", value._id)
+            .replace("#URL#", urlAPImatkul);
     addInner("iniTabel", content);
 }
 
