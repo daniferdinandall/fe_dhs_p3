@@ -33,7 +33,7 @@ export let isiTabelDosen =
     <td class="whitespace-nowrap px-6 py-4">
         <div class="w-auto">
             <p>
-                <a type="button" href="editdosen.html?dosenId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <a type="button" href="editDosen.html?dosenId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
                 <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
             </p>
         </div>
@@ -54,7 +54,7 @@ export let isiTabelMatkul =
     <td class="whitespace-nowrap px-6 py-4">
         <div class="w-auto">
             <p>
-                <a type="button" href="editmatkul.html?matkulId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
+                <a type="button" href="editMatkul.html?matkulId=#IDEDIT#" class="text-s font-semibold text-coolGray-800">Edit</a> | 
                 <button type="button" id="del_button" onclick="deleteData('#IDELETE#','#URL#')"> Delete
             </p>
         </div>

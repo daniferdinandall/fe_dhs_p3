@@ -10,7 +10,7 @@ function editData() {
     let data = {
         kode_dosen : getValue("kode"),
         nama : getValue("nama"),
-        phone_number : parseFloat("phone"),
+        phone_number : getValue("phone"),
     }
     
     putData(urlPUT, data, AmbilResponse);
