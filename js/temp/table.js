@@ -67,6 +67,7 @@ export let isiTabelMahasiswa = `
 </td>
 </tr>
 `
+
 export let isiTabelNilai =
     `
 <tr class="border-b dark:border-neutral-500">
@@ -74,5 +75,17 @@ export let isiTabelNilai =
     <td class="whitespace-nowrap px-6 py-4">#SKS#</td>
     <td class="whitespace-nowrap px-6 py-4">#DOSEN#</td>
     <td class="whitespace-nowrap px-6 py-4">#NILAI#</td>
+</tr>
+`
+export let isiTabelProdi = `
+<tr class="border-b dark:border-neutral-500">
+    <td class="whitespace-nowrap px-6 py-4">#KODE#</td>
+    <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
+</tr>
+`
+export let isiTabelFakultas = `
+<tr class="border-b dark:border-neutral-500">
+    <td class="whitespace-nowrap px-6 py-4">#KODE#</td>
+    <td class="whitespace-nowrap px-6 py-4">#NAMA#</td>
 </tr>
 `

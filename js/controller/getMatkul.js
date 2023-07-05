@@ -10,7 +10,7 @@ export function isiOptionMatkul(results) {
 
 function isiRow(value) {
     console.log(value)
-    console.log(value.mata_kuliah ? value.mata_kuliah[1].nama : "1")
+    // console.log(value.mata_kuliah ? value.mata_kuliah[1].nama : "1")
     let content =
         isiTabelMatkul.replace("#KODE#", value.kode_matkul)
             .replace("#NAMA#", value.nama)
