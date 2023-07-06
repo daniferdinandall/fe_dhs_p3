@@ -5,8 +5,12 @@ import { urlPUT, AmbilResponse } from "../config/url_put_fakultas.js";
 
 function editData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    if(getValue("kode") == '' || getValue("nama") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Fakultas.');
+        return; // Validasi gagal
+    }
+
     let data = {
         kode_fakultas : getValue("kode"),
         nama : getValue("nama"),

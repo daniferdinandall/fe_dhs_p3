@@ -5,8 +5,13 @@ import { urlAPIdosen, AmbilResponse } from "../config/url.js";
 
 function pushData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    
+    if (getValue("kode") == '' || getValue("nama") == '' || getValue("phone") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Mahasiswa.');
+        return; // Validasi gagal
+    }
+
     let data = {
         kode_dosen : getValue("kode"),
         nama : getValue("nama"),

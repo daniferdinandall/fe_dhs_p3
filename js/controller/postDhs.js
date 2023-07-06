@@ -8,26 +8,30 @@ function pushData() {
     // window.location.href = "index.html";
     // var hari_kerja = getValue("hari_kerja");
     let data = {
-        mata_kuliah:[]
+        mata_kuliah: []
     }
 
     // loop nilai mata_kuliah
     let dataNamaMatkul = [];
     var elements = document.getElementsByClassName("optionMatakuliah");
     var elements2 = document.getElementsByClassName("namaOptionMatakuliah");
-    for(var i = 0; i < elements2.length; i++){
+    for (var i = 0; i < elements2.length; i++) {
         var element = elements2[i];
         var id = element.id;
         var value = element.innerHTML;
         dataNamaMatkul.push(value);
         // console.log("Kelas: optionMatakuliah, ID: " + id);
     }
-    console.log(dataNamaMatkul)
 
+    let allNilai = true;
     for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
         var id = element.id;
         var value = element.value;
+        if (value === '') {
+            // Tampilkan pesan error jika tidak ada opsi yang dipilih
+            allNilai=false;
+        }
         var sks = element.getAttribute("sks");
         var dosen = element.getAttribute("dosen");
         data.mata_kuliah.push({
@@ -39,14 +43,22 @@ function pushData() {
                 "nama": dosen
             }
         });
-        console.log(sks, dosen);
     }
-    console.log(data.mata_kuliah[0]);
+    if (!allNilai) {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Nilai Mata Kuliah.');
+        return; // Validasi gagal
+    }
 
     // add nilai mahasiswa
-    let elementMhs = document.getElementById("optionMahasiswa"); 
+    let elementMhs = document.getElementById("optionMahasiswa");
     const selectedOption = elementMhs.options[elementMhs.selectedIndex];
-    console.log(selectedOption.getAttribute("alldata"))
+    // console.log(selectedOption.getAttribute("alldata"))
+    if (elementMhs.value === '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Mahasiswa.');
+        return; // Validasi gagal
+    }
     data.mahasiswa = JSON.parse(selectedOption.getAttribute("alldata"))
     // console.log(getValue("optionMahasiswa"))
 

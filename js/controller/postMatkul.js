@@ -5,8 +5,11 @@ import { urlAPImatkul, AmbilResponse } from "../config/url.js";
 
 function pushData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    if(getValue("kodematkul") == '' || getValue("nama") == '' || getValue("sks") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Mata Kuliah.');
+        return; // Validasi gagal
+    }
     let data = {
         kode_matkul : getValue("kodematkul"),
         nama : getValue("nama"),
@@ -16,9 +19,13 @@ function pushData() {
     // add Dosen Wali
     let elementDosenWali = document.getElementById("optionDosen");
     const selectedOptionDosenWali = elementDosenWali.options[elementDosenWali.selectedIndex];
-    console.log(selectedOptionDosenWali.getAttribute("alldata"))
+
+    if (selectedOptionDosenWali.getAttribute("alldata") == null) {
+        alert('Harap Pilih Dosen Wali.');
+        return; // Validasi gagal
+    }
+
     data.dosen = JSON.parse(selectedOptionDosenWali.getAttribute("alldata"))
-    console.log(data)
     postData(urlAPImatkul, data, AmbilResponse);
 
     // window.location.href = "index.html";

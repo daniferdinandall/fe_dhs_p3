@@ -5,8 +5,11 @@ import { urlAPImahasiswa, AmbilResponse } from "../config/url.js";
 
 function pushData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    if(getValue("nama") == '' || getValue("npm") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Mahasiswa.');
+        return; // Validasi gagal
+    }
     let data = {
         nama : getValue("nama"),
         npm : parseFloat(getValue("npm")),
@@ -15,22 +18,25 @@ function pushData() {
     // add nilai fakultas
     let elementMhs = document.getElementById("optionFakultas"); 
     const selectedOption = elementMhs.options[elementMhs.selectedIndex];
-    console.log(selectedOption.getAttribute("alldata"))
-    data.fakultas = JSON.parse(selectedOption.getAttribute("alldata"))
-
+    
     // add nilai prodi
     let elementProdi = document.getElementById("optionProdi");
     const selectedOptionProdi = elementProdi.options[elementProdi.selectedIndex];
-    console.log(selectedOptionProdi.getAttribute("alldata"))
-    data.program_studi = JSON.parse(selectedOptionProdi.getAttribute("alldata"))
-
-
+    
+    
     // add nilai Dosen Wali
     let elementDosenWali = document.getElementById("optionDosen");
     const selectedOptionDosenWali = elementDosenWali.options[elementDosenWali.selectedIndex];
-    console.log(selectedOptionDosenWali.getAttribute("alldata"))
+    
+    // masukan ke data
+    if (selectedOption.getAttribute("alldata") == null || selectedOptionDosenWali.getAttribute("alldata") == null || selectedOptionProdi.getAttribute("alldata") == null) {
+        alert('Harap Masukan Data Mahasiswa.');
+        return; // Validasi gagal
+    }
+    data.fakultas = JSON.parse(selectedOption.getAttribute("alldata"))
+    data.program_studi = JSON.parse(selectedOptionProdi.getAttribute("alldata"))
     data.dosen_wali = JSON.parse(selectedOptionDosenWali.getAttribute("alldata"))
-    console.log(data)
+    
     postData(urlAPImahasiswa, data, AmbilResponse);
 
     // window.location.href = "index.html";

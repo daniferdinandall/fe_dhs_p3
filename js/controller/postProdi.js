@@ -5,8 +5,11 @@ import { urlAPIProgramStudi, AmbilResponse } from "../config/url.js";
 
 function pushData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    if(getValue("kode") == '' || getValue("nama") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Program Studi.');
+        return; // Validasi gagal
+    }
     let data = {
         kode_program_studi : getValue("kode"),
         nama : getValue("nama"),
