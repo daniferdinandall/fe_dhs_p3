@@ -1,6 +1,7 @@
-
+import { showLoadingModal, hideLoadingModal } from '../component/loading.js';
 import { urlAPILogin } from "../config/url.js";
 const login = () => {
+    showLoadingModal()
     const e = document.getElementById("email").value;
     const p = document.getElementById("password").value;
     const email = e.trim();
@@ -32,15 +33,18 @@ const login = () => {
                 alert("success")
                 // .then(() => {
                 // Mengarahkan pengguna ke halaman setelah login berhasil
+                hideLoadingModal()
                 window.location.href = "index.html";
                 // });
             } else {
                 // Menampilkan pesan error menggunakan SweetAlert
+                hideLoadingModal()
                 alert(result.message);
             }
         })
         .catch((error) => {
             // Menampilkan pesan error jika terjadi kesalahan
+            hideLoadingModal()
             alert("An error occurred. Please try again later.");
             console.error("Error:", error);
         });

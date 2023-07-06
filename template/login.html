@@ -37,6 +37,7 @@
 </head>
 
 <body class="bg-gray-200">
+    <link rel="stylesheet" href="./css/tailwind/style.css">
 
     <div class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">
         <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
@@ -162,6 +163,13 @@
                 </div>
             </div>
         </div>
+        <div id="loadingModal" class="modal">
+            <div class="modal-content">
+                <div class="loader"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
+        <script src="../js/component/loading.js"></script>
         <script type="module" src="../js/auth/login.js"></script>
     </div>
 </body>
