@@ -27,7 +27,7 @@ export function isiData(results) {
       console.log(`Value at path ${path}:`, value);
       inputElement.value = value;
     });
-  }, 1000); 
+  }, 2000); 
 }
 
 function getNestedValue(obj, path, index, property) {
