@@ -72,6 +72,9 @@
                         <span class="text-xs text-slate-400">Mahasiswa ULBI</span>
                     </div>
                 </a>
+                <!-- logout button -->
+                <button id="logout" class="flex flex-wrap justify-center w-full px-4 py-2 bg-red-500 hover:bg-red-600 font-medium text-sm text-white border border-red-500 rounded-md shadow-button">Logout</button>
+                
                 <hr class="my-2 border-slate-700">
                 <div id="menu" class="flex flex-col space-y-2 my-5">
                     <a href="index.html"
@@ -231,6 +234,8 @@
     </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="../js/controller/deleteDhs.js"></script>
+    <script type="module" src="../js/auth/validateToken.js"></script>
+    <script type="module" src="../js/auth/logout.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
+import { showLoadingModal, hideLoadingModal } from '../component/loading.js';
 export function isiData(results) {
+
+
   setTimeout(function() {
-    // console.log("After waiting for 10 seconds");
+    console.log("After waiting for 10 seconds");
     console.log(results);
     const inputMapping = [
       { id: 'optionMahasiswa', path: 'mahasiswa._id' },
-      // { id: 'jam_masuk', path: 'biodata.jam_kerja', index: 0, property: 'jam_masuk' },
-      // { id: 'jam_keluar', path: 'biodata.jam_kerja', index: 0, property: 'jam_keluar'  },
-      // { id: 'durasi', path: 'biodata.jam_kerja', index: 0, property: 'durasi'  },
     ];
   
     let nilaiMatkul = results.mata_kuliah;
@@ -26,8 +26,9 @@ export function isiData(results) {
       const value = getNestedValue(results, path, index, property);
       console.log(`Value at path ${path}:`, value);
       inputElement.value = value;
+      hideLoadingModal()
     });
-  }, 1000); 
+  }, 1500); 
 }
 
 function getNestedValue(obj, path, index, property) {

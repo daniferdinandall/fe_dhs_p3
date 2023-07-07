@@ -5,8 +5,13 @@ import { urlPUT, AmbilResponse } from "../config/url_put_mahasiswa.js";
 
 function editData() {
     console.log("pushData");
-    // window.location.href = "index.html";
-    // var hari_kerja = getValue("hari_kerja");
+    
+    if(getValue("nama") == '' || getValue("npm") == '') {
+        // Tampilkan pesan error jika tidak ada opsi yang dipilih
+        alert('Harap Masukan Data Mahasiswa.');
+        return; // Validasi gagal
+    }
+    
     let data = {
         nama : getValue("nama"),
         npm : parseFloat(getValue("npm")),
@@ -41,7 +46,7 @@ function editData() {
 
 function cancel() {
     console.log("cancel");
-    window.location.href = "index.html";
+    window.location.href = "mahasiswa.html";
 }
 
 onClick("button", editData);

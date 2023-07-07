@@ -10,6 +10,11 @@ export const urlAPIProgramStudi = "https://ws-dani-pemrog3-b1fcf6b5d6ca.herokuap
 
 export const urlAPIFakultas = "https://ws-dani-pemrog3-b1fcf6b5d6ca.herokuapp.com/fakultas";
 
+export const urlAPILogin = "https://ws-dani-pemrog3-b1fcf6b5d6ca.herokuapp.com/login";
+
+export const urlAPIValidate = "https://ws-dani-pemrog3-b1fcf6b5d6ca.herokuapp.com/validate";
+
+
 // export const urlAPIdhs = "http://127.0.0.1:8000/dhs";
 
 // export const urlAPImatkul = "http://127.0.0.1:8000/matakuliah";
@@ -21,6 +26,10 @@ export const urlAPIFakultas = "https://ws-dani-pemrog3-b1fcf6b5d6ca.herokuapp.co
 // export const urlAPIProgramStudi = "http://127.0.0.1:8000/programstudi";
 
 // export const urlAPIFakultas = "http://127.0.0.1:8000/fakultas";
+
+// export const urlAPILogin = "http://127.0.0.1:8000/login";
+
+// export const urlAPIValidate = "http://127.0.0.1:8000/validate";
 
 export function AmbilResponse(result) {
     console.log(result); //menampilkan response API pada console
